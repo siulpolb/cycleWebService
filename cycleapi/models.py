@@ -5,9 +5,9 @@ class Usuario(models.Model):
 	correo = models.TextField(max_length=50,unique=True)
 	password = models.TextField(max_length=20)
 
-#class Accidente(models.Model):
-#	latitud = models.FloatField()
-#	longitud = models.FloatField()
-#	fecha = models.DateField()
-#	hora = models.TimeField()
-#	usuario = models.ForeignKey(Usuario, related_name='accidentes')
+class Accidente(models.Model):
+	latitud = models.FloatField()
+	longitud = models.FloatField()
+	fecha = models.DateField()
+	hora = models.TimeField()
+	usuario = models.ForeignKey(Usuario, related_name='accidentes')
