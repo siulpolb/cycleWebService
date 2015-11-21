@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from cycleapi.viewsets import UsuarioViewSet
+from cycleapi.viewsets import *
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'usuario', UsuarioViewSet)
-
+router.register(r'accidente', AccidenteViewSet)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),

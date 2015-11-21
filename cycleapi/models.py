@@ -5,6 +5,9 @@ class Usuario(models.Model):
 	correo = models.TextField(max_length=50,unique=True)
 	password = models.TextField(max_length=20)
 
+	def __unicode__(self):
+		return self.usuario
+
 class Accidente(models.Model):
 	latitud = models.FloatField()
 	longitud = models.FloatField()
