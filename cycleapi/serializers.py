@@ -8,6 +8,7 @@ class UsuarioSerializer(serializers.Serializer):
 	usuario = serializers.CharField()
 	correo = serializers.CharField()
 	password = serializers.CharField()
+	m2xDevice = serializers.CharField()
 
 	def create(self,validated_data):
 		return Usuario.objects.create(**validated_data)
